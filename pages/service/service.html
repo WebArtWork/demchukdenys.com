@@ -1,0 +1,69 @@
+<div class="wrapper">
+	<div class="content">
+        {{{'/templates/andreylizivinskiy/components/topbar'|c({website: website})|safe}}}
+        <div class="top">
+            <div class="container">
+                <div class="article__main-title global-title">
+					Послуга
+                </div>
+                <div id="page" class="estate__wrap">
+					<div class="estate__slider">
+						<div class="column small-11 small-centered">
+							<div class="slider-for">
+                                <a href="{{{service.thumb}}}" data-fancybox="service" class="thumb" tabindex="-1">
+                                    <img src="{{{service.thumb}}}" alt="{{{service.name}}}">
+                                </a>
+								 {% for thumb in service.thumbs %}
+                                <a href="{{{thumb}}}" data-fancybox="service" class="thumb" tabindex="-1">
+                                    <img src="{{{thumb}}}" alt="{{{service.name}}}">
+                                </a>
+								{% endfor %}
+							</div>
+							<div class="slider-navV">
+								<div><img src="{{{service.thumb}}}" alt="{{{service.name}}}"></div>
+								{% for thumb in service.thumbs %}
+								<div><img src="{{{thumb}}}" alt="{{{service.name}}}"></div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+                    <div class="estate__info">
+                        <div class="estate__title">
+                            {{{service.name}}}
+                        </div>
+                        <pre class="estate__description">{{{service.description|safe}}}</pre>
+                        <!-- <div class="estate__details-wrap">
+                            <div class="estate__details-item">
+                                <div class="estate__details-img">
+                                    <img src="/andreylizivinskiy/img/icons/area.svg" alt="">
+                                </div>
+                                <div class="estate__details-text">
+                                    12312321312
+                                </div>
+                            </div>
+                            <div class="estate__details-item">
+                                <div class="estate__details-img">
+                                    <img src="/andreylizivinskiy/img/icons/price.svg" alt="">
+                                </div>
+                                <div class="estate__details-text">
+                                    12312321312
+                                </div>
+                            </div>
+                        </div> -->
+						{% if website %}
+                        <div class="product__btn-wrap product__btn-wrap--width">
+                            <!-- <div class="product__btn-text">
+								{{{product.price}}}
+                            </div> -->
+                            <a href="https://{{{website}}}/order/service/{{{service.id}}}" class="product__btn-cart">
+                                <img src="/andreylizivinskiy/img/icons/cart.svg" alt="">
+                            </a>
+                        </div>
+						{% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	{{{'/templates/andreylizivinskiy/components/footer'|c({data: store.data, footer: footer})|safe}}}
+</div>

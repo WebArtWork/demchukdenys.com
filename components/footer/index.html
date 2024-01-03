@@ -1,0 +1,77 @@
+<div class="footer">
+	<div class="container">
+		<div class="footer__list">
+			<div class="footer__wrap footer__wrap--first">
+				<a href="">
+					<img src="/andreylizivinskiy/img/logo.svg" alt="" />
+				</a>
+			</div>
+			<div class="footer__list-wrap footer__wrap">
+				<!--
+				<div class="footer__item">
+					<a class="footer__links-title" href="/portfolios">Статті</a>
+					{% for content in footer.contents %}
+					<a href="{{{content.url}}}" class="footer__link">{{{content.name}}}</a>
+					{% endfor %}
+				</div>
+				-->
+				<div class="footer__item">
+					<a class="footer__links-title" href="/">Статті</a>
+					{% for article in footer.topArticles %}
+					<a href="/article/{{{article.id}}}" class="footer__link">{{{article.name}}}</a>
+					{% endfor %}
+				</div>
+				<div class="footer__item">
+					<a class="footer__links-title" href="/">Роботи</a>
+					{% for portfolio in footer.topPortfolios %}
+					<a href="/portfolio/{{{portfolio.id}}}" class="footer__link">{{{portfolio.name}}}</a>
+					{% endfor %}
+				</div>
+				<div class="footer__item">
+					<a class="footer__links-title" href="/">Послуги</a>
+					{% for service in footer.topServices %}
+					<a href="/service/{{{service.id}}}" class="footer__link">{{{service.name}}}</a>
+					{% endfor %}
+				</div>
+				<div class="footer__item">
+					<a class="footer__links-title" href="/">Продукція</a>
+					{% for product in footer.topProducts %}
+					<a href="/product/{{{product.id}}}" class="footer__link">{{{product.name}}}</a>
+					{% endfor %}
+				</div>
+				<div class="footer__item">
+					<a class="footer__links-title" href="/">Інформація</a>
+					{% for content in footer.contents %}
+					<a href="{{{content.url}}}" class="footer__link">{{{content.name}}}</a>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="footer__wrap footer__wrap--last">
+				<div class="footer__wrap-socials">
+					{% if data.telegram %}
+					<a href="{{{data.telegram}}}" class="footer__btn btn">
+						<img src="/andreylizivinskiy/img/social/1.svg" alt="" />
+					</a>
+					{% endif %}
+					{% if data.phone %}
+					<a href="tel:{{{data.phone}}}" class="footer__btn btn">
+						<img src="/andreylizivinskiy/img/social/2.svg" alt="" />
+					</a>
+					{% endif %}
+				</div>
+				<div class="footer__wrap-socials">
+					{% if data.facebook %}
+					<a href="{{{data.facebook}}}" class="footer__btn btn">
+						<img src="/andreylizivinskiy/img/social/3.svg" alt="" />
+					</a>
+					{% endif %}
+					{% if data.instagram %}
+					<a href="{{{data.instagram}}}" class="footer__btn btn">
+						<img src="/andreylizivinskiy/img/social/4.svg" alt="" />
+					</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

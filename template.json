@@ -1,0 +1,13 @@
+{
+	"title": "Welcome to waw Template",
+	"description": "description",
+	"keywords": "keywords",
+	"prefix": "/andreylizivinskiy",
+	"picture": "picture",
+	"author": "author",
+	"moderators": [],
+	"scss": "scss/index.scss",
+	"variables": {
+		"primary_color": "#d3c9b7"
+	}
+}

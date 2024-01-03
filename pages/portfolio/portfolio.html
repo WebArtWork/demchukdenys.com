@@ -1,0 +1,77 @@
+<div class="wrapper">
+	<div class="content">
+        {{{'/templates/andreylizivinskiy/components/topbar'|c({website: website})|safe}}}
+        <div class="top">
+            <div class="container">
+                <div class="article__main-title global-title">
+					Робота
+                </div>
+                <div id="page" class="estate__wrap">
+                    <div class="estate__slider">
+                        <div class="column small-11 small-centered">
+                            <div class="slider-for">
+                                <a href="{{{portfolio.thumb}}}" data-fancybox="cetificate" class="thumb" tabindex="-1">
+                                    <img src="{{{portfolio.thumb}}}" alt="{{{portfolio.name}}}">
+                                </a>
+								{% for thumb in portfolio.thumbs %}
+                                <a href="{{{thumb}}}" data-fancybox="cetificate" class="thumb" tabindex="-1">
+                                    <img src="{{{thumb}}}" alt="{{{portfolio.name}}}">
+                                </a>
+								{% endfor %}
+                            </div>
+                            <div class="slider-navV">
+                                <div><img src="{{{portfolio.thumb}}}" alt="{{{portfolio.name}}}"></div>
+								{% for thumb in portfolio.thumbs %}
+                                <div><img src="{{{thumb}}}" alt="{{{portfolio.name}}}"></div>
+								{% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="estate__info">
+                        <div class="estate__title">
+                            {{{portfolio.name}}}
+                        </div>
+                        <pre class="estate__description">{{{portfolio.description}}}</pre>
+                        <!--
+                        <div class="estate__details-wrap">
+                            <div class="estate__details-item">
+                                <div class="estate__details-img">
+                                    <img src="/andreylizivinskiy/img/icons/area.svg" alt="">
+                                </div>
+                                <div class="estate__details-text">
+                                    12312321312
+                                </div>
+                            </div>
+                            <div class="estate__details-item">
+                                <div class="estate__details-img">
+                                    <img src="/andreylizivinskiy/img/icons/price.svg" alt="">
+                                </div>
+                                <div class="estate__details-text">
+                                    12312321312
+                                </div>
+                            </div>
+                            <div class="estate__details-item">
+                                <div class="estate__details-img">
+                                    <img src="/andreylizivinskiy/img/icons/locb.svg" alt="">
+                                </div>
+                                <div class="estate__details-text">
+                                    12312321312
+                                </div>
+                            </div>
+                            <div class="estate__details-item">
+                                <div class="estate__details-img">
+                                    <img src="/andreylizivinskiy/img/icons/floor.svg" alt="">
+                                </div>
+                                <div class="estate__details-text">
+                                    12312321312
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	{{{'/templates/andreylizivinskiy/components/footer'|c({data: store.data, footer: footer})|safe}}}
+</div>

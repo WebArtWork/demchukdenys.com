@@ -1,0 +1,23 @@
+<div class="wrapper">
+	<div class="content">
+		{{{'/templates/andreylizivinskiy/components/topbar'|c({website: website})|safe}}}
+		<div class="top">
+			<div class="container">
+				<div class="article-o__list">
+					{% if content.thumb %}
+					<div class="article-o__main-img">
+						<img src="{{{thumb}}}" alt="{{{name}}}">
+					</div>
+					{% endif %}
+					<div class="article-o__main-title">
+						{{{name}}}
+					</div>
+					<pre class="article-o__description">
+						{{{content.content|safe}}}
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{{'/templates/andreylizivinskiy/components/footer'|c({data: store.data, footer: footer})|safe}}}
+</div>
