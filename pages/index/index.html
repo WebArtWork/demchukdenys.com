@@ -1,7 +1,7 @@
 <div class="wrapper">
 	<div class="content">
 		<div class="first-page">
-			{{{'/templates/andreylizivinskiy/components/topbar'|c({website: website})|safe}}}
+			{{{'/andreylizivinskiy/components/topbar'|c({website: website})|safe}}}
 			{% if variables.welcomeSwitch == "1" %}
 			<div class="secondary-welcome">
 				<div class="container">
@@ -778,6 +778,6 @@
 		</section>
 
 	</div>
-	{{{'/templates/andreylizivinskiy/components/footer'|c({data:
+	{{{'/andreylizivinskiy/components/footer'|c({data:
 	store.data, footer: footer})|safe}}}
 </div>
