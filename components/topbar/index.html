@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="header__wrap">
 			<div class="header__logo">
-				<a href="">
+				<a href="/">
 					<img src="/andreylizivinskiy/img/logo.svg" alt="">
 				</a>
 			</div>
@@ -10,10 +10,10 @@
 				<div class="burger"></div>
 			</div>
 			<ul class="header__navigation">
+				<li><a href="/articles">Новини</a></li>
 				<li><a href="/portfolios">Роботи</a></li>
-				<li><a href="/services">Послуги</a></li>
 				<li><a href="/products">Продукція</a></li>
-				<li><a href="/articles">Статті</a></li>
+				<li><a href="/services">Послуги</a></li>
 			</ul>
 			<a {% if store.website %}href="https://{{{store.website}}}/profile"{% endif %} class="header__user">
 			{% if store.website %}
@@ -28,59 +28,58 @@
 </header>
 
 {% if variables.headerSwitch == "1" %}
-    <header class="secondary-header">
-		<div class="container">
-			<div class="secondary-header__wrap">
-				<div class="header__logo">
-					<a href="">
-						<img src="/andreylizivinskiy/img/logo.svg" alt="">
-					</a>
-				</div>
-				<div class="burger-wrap">
-					<div class="burger"></div>
-				</div>
-				<ul class="header__navigation">
-					<li><a href="/portfolios">Роботи</a></li>
-					<li><a href="/services">Послуги</a></li>
-					<li><a href="/products">Продукція</a></li>
-					<li><a href="/articles">Статті</a></li>
-				</ul>
-				<div class="secondary-header__btn">
-					<a href="tel:+380 96 662 2037" class="btn">Зворотній виклик</a>
-				</div>
+<header class="secondary-header">
+	<div class="container">
+		<div class="secondary-header__wrap">
+			<div class="header__logo">
+				<a href="">
+					<img src="/andreylizivinskiy/img/logo.svg" alt="">
+				</a>
+			</div>
+			<div class="burger-wrap">
+				<div class="burger"></div>
+			</div>
+			<ul class="header__navigation">
+				<li><a href="/portfolios">Роботи</a></li>
+				<li><a href="/services">Послуги</a></li>
+				<li><a href="/products">Продукція</a></li>
+				<li><a href="/articles">Статті</a></li>
+			</ul>
+			<div class="secondary-header__btn">
+				<a href="tel:+380 96 662 2037" class="btn">Зворотній виклик</a>
 			</div>
 		</div>
-	</header>
-    {% endif %}
-    {% if variables.headerSwitch  == "2" %}
-    <header class="third-header secondary-header">
-		<div class="container">
-			<div class="third-header__wrap secondary-header__wrap">
-				<div class="header__logo">
-					<a href="">
-						<img src="/andreylizivinskiy/img/logo.svg" alt="">
-					</a>
-				</div>
-				<div class="burger-wrap">
-					<div class="burger"></div>
-				</div>
-				<ul class="header__navigation">
-					<li><a href="/portfolios">Роботи</a></li>
-					<li><a href="/services">Послуги</a></li>
-					<li><a href="/products">Продукція</a></li>
-					<li><a href="/articles">Статті</a></li>
-				</ul>
-				<div class="third-header__wrap-socials">
-					<a href="https://t.me/Demchukdv" class="footer__btn btn">
-						<img src="/andreylizivinskiy/img/social/1.svg" alt="">
-					</a>
+	</div>
+</header>
+{% endif %}
+{% if variables.headerSwitch  == "2" %}
+<header class="third-header secondary-header">
+	<div class="container">
+		<div class="third-header__wrap secondary-header__wrap">
+			<div class="header__logo">
+				<a href="">
+					<img src="/andreylizivinskiy/img/logo.svg" alt="">
+				</a>
+			</div>
+			<div class="burger-wrap">
+				<div class="burger"></div>
+			</div>
+			<ul class="header__navigation">
+				<li><a href="/portfolios">Роботи</a></li>
+				<li><a href="/services">Послуги</a></li>
+				<li><a href="/products">Продукція</a></li>
+				<li><a href="/articles">Статті</a></li>
+			</ul>
+			<div class="third-header__wrap-socials">
+				<a href="https://t.me/Demchukdv" class="footer__btn btn">
+					<img src="/andreylizivinskiy/img/social/1.svg" alt="">
+				</a>
 
-					<a href="tel:+380 96 662 2037" class="footer__btn btn">
-						<img src="/andreylizivinskiy/img/social/2.svg" alt="">
-					</a>
-				</div>
+				<a href="tel:+380 96 662 2037" class="footer__btn btn">
+					<img src="/andreylizivinskiy/img/social/2.svg" alt="">
+				</a>
 			</div>
 		</div>
-	</header>
-    {% endif %}
-{{{variables.headerSwitch}}}
+	</div>
+</header>
+{% endif %}

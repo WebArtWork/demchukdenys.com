@@ -7,41 +7,33 @@
 				</a>
 			</div>
 			<div class="footer__list-wrap footer__wrap">
-				<!--
 				<div class="footer__item">
-					<a class="footer__links-title" href="/portfolios">Статті</a>
-					{% for content in footer.contents %}
-					<a href="{{{content.url}}}" class="footer__link">{{{content.name}}}</a>
-					{% endfor %}
-				</div>
-				-->
-				<div class="footer__item">
-					<a class="footer__links-title" href="/">Статті</a>
-					{% for article in footer.topArticles %}
-					<a href="/article/{{{article.id}}}" class="footer__link">{{{article.name}}}</a>
+					<a class="footer__links-title" href="/articles">Новини</a>
+					{% for article in top_articles %}
+					<a href="/article/{{{article._id}}}" class="footer__link">{{{article.name}}}</a>
 					{% endfor %}
 				</div>
 				<div class="footer__item">
-					<a class="footer__links-title" href="/">Роботи</a>
-					{% for portfolio in footer.topPortfolios %}
-					<a href="/portfolio/{{{portfolio.id}}}" class="footer__link">{{{portfolio.name}}}</a>
+					<a class="footer__links-title" href="/portfolios">Роботи</a>
+					{% for portfolio in top_portfolios %}
+					<a href="/portfolio/{{{portfolio._id}}}" class="footer__link">{{{portfolio.name}}}</a>
 					{% endfor %}
 				</div>
 				<div class="footer__item">
-					<a class="footer__links-title" href="/">Послуги</a>
-					{% for service in footer.topServices %}
-					<a href="/service/{{{service.id}}}" class="footer__link">{{{service.name}}}</a>
+					<a class="footer__links-title" href="/services">Послуги</a>
+					{% for service in top_services %}
+					<a href="/service/{{{service._id}}}" class="footer__link">{{{service.name}}}</a>
 					{% endfor %}
 				</div>
 				<div class="footer__item">
-					<a class="footer__links-title" href="/">Продукція</a>
-					{% for product in footer.topProducts %}
-					<a href="/product/{{{product.id}}}" class="footer__link">{{{product.name}}}</a>
+					<a class="footer__links-title" href="/products">Продукція</a>
+					{% for product in top_products %}
+					<a href="/product/{{{product._id}}}" class="footer__link">{{{product.name}}}</a>
 					{% endfor %}
 				</div>
 				<div class="footer__item">
 					<a class="footer__links-title" href="/">Інформація</a>
-					{% for content in footer.contents %}
+					{% for content in contents %}
 					<a href="{{{content.url}}}" class="footer__link">{{{content.name}}}</a>
 					{% endfor %}
 				</div>
