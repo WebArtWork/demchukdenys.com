@@ -120,6 +120,7 @@
 			</section>
 		{% endif %}
 
+		{% if top_portfolios.length %}
 		<section class="slider">
 			<div class="container">
 				<div class="slider__title global-title">Кращі роботи</div>
@@ -132,6 +133,8 @@
 				</div>
 			</div>
 		</section>
+		{% endif %}
+
 
 		{% if variables.productSwitch == "1" %}
 		<div class="secondary-product">
@@ -220,6 +223,7 @@
 			</div>
 		</div>
 		{% endif %}
+		{% if top_products.length %}
 		<section class="product">
 			<div class="container">
 				<div class="services__main-title global-title">Продукція</div>
@@ -278,6 +282,7 @@
 				</div>
 			</div>
 		</section>
+		{% endif %}
 
 		{% if variables.servicesSwitch == "1" %}
 		<section class="secondary-services">
@@ -345,6 +350,7 @@
 			</div>
 		</section>
 		{% endif %}
+		{% if top_services.length %}
 		<section class="services">
 			<div class="container">
 				<div class="services__main-title global-title">Послуги</div>
@@ -369,6 +375,7 @@
 				</div>
 			</div>
 		</section>
+		{% endif %}
 
 		{% if variables.articlesSwitch == "1" %}
 		<section class="secondary-articles">
@@ -433,6 +440,7 @@
 			</div>
 		</section>
 		{% endif %}
+		{% if top_articles.length %}
 		<section class="articles">
 				<div class="container">
 					<div class="articles__main-title global-title">Новини</div>
@@ -499,6 +507,7 @@
 					</div>
 				</div>
 		</section>
+		{% endif %}
 
 		{% if variables.advanSwitch == "1" %}
 		<section class="secondary-advantages advantages">
