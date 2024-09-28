@@ -1,7 +1,7 @@
 <div class="wrapper">
 	<div class="content">
 		<div class="header__top header__top">
-			{{{'/andreylizivinskiy/components/topbar'|c({website: website})|safe}}}
+			{{{'components/topbar'|c({website: website})|safe}}}
 			<section class="main-screen">
 				<div class="container">
 					<div class="main__wrap">
@@ -78,7 +78,7 @@
 												<a href="" class="product__btn-wrap">
 													{% if website %}
 													<div class="product__btn-cart">
-														<img src="/andreylizivinskiy/img/icons/cart.svg" alt="">
+														<img src="img/icons/cart.svg" alt="">
 														<span></span>
 													</div>
 													<div class="product__btn-text">
@@ -88,7 +88,7 @@
 												</a>
 												<a href="" class="product__btn-wrap">
 													<div class="product__btn-cart">
-														<img src="/andreylizivinskiy/img/icons/more.svg" alt="">
+														<img src="img/icons/more.svg" alt="">
 														<span></span>
 													</div>
 													<div class="product__btn-text">
@@ -108,5 +108,5 @@
 			</section>
 		</div>
 	</div>
-	{{{'/andreylizivinskiy/components/footer'|c({data: store.data,footer: footer})|safe}}}
+	{{{'components/footer'|c({data: store.data,footer: footer})|safe}}}
 </div>

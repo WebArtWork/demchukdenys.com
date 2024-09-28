@@ -1,6 +1,6 @@
 <div class="wrapper">
 	<div class="content">
-		{{{'/andreylizivinskiy/components/topbar'|c({website: website})|safe}}}
+		{{{'components/topbar'|c({website: website})|safe}}}
 		<div class="top">
 			<div class="container">
 				<div class="article-o__list">
@@ -19,5 +19,5 @@
 			</div>
 		</div>
 	</div>
-	{{{'/andreylizivinskiy/components/footer'|c({data: store.data, top_articles: top_articles, top_portfolios: top_portfolios, top_services: top_services, top_products: top_products, contents: contents })|safe}}}
+	{{{'components/footer'|c({data: store.data, top_articles: top_articles, top_portfolios: top_portfolios, top_services: top_services, top_products: top_products, contents: contents })|safe}}}
 </div>

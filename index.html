@@ -1,44 +1,523 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<base href="/">
+	<base href="/andreylizivinskiy/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{{{title}}}</title>
-	<meta itemprop="name" content="{{{title}}}">
-	<meta name="twitter:title" content="{{{title}}}">
-	<meta property="og:title" content="{{{title}}}" />
+	<title>Cool Title</title>
+	<meta itemprop="name" content="Cool Title">
+	<meta name="twitter:title" content="Cool Title">
+	<meta property="og:title" content="Cool Title" />
 
-	<meta name="description" content="{{{description}}}">
-	<meta itemprop="description" content="{{{description}}}">
-	<meta name="twitter:description" content="{{{description}}}">
-	<meta property="og:description" content="{{{description}}}" />
+	<meta name="description" content="description">
+	<meta itemprop="description" content="description">
+	<meta name="twitter:description" content="description">
+	<meta property="og:description" content="description" />
 
-	<meta itemprop="image" content="https://{{{domain+thumb}}}">
-	<meta name="twitter:image:src" content="https://{{{domain+thumb}}}">
-	<meta property="og:image" content="https://{{{domain+thumb}}}" />
+	<meta itemprop="image" content="https://">
+	<meta name="twitter:image:src" content="https://">
+	<meta property="og:image" content="https://" />
 
-	<link rel="icon" type="image/x-icon" href="/andreylizivinskiy/img/logo.ico">
-	<link rel="stylesheet" type="text/css" href="/andreylizivinskiy/libs/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="/andreylizivinskiy/libs/slick/slick-theme.css"/>
-	<link rel="stylesheet" href="/andreylizivinskiy/libs/fancybox/jquery.fancybox.min.css">
-	<link rel="stylesheet" href="/andreylizivinskiy/css/index.css">
+	<link rel="icon" type="image/x-icon" href="img/logo.ico">
+	<link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/index.css">
 
 	<style>
 		:root {
-			--primary_color: {{{variables.primary_color || "#d3c9b7"}}};
+			--primary_color: #d3c9b7;
 		}
 	</style>
 </head>
 <body>
-	<!-- HTML -->
-	<script type="text/javascript" src="/andreylizivinskiy/js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="/andreylizivinskiy/libs/slick/slick.min.js"></script>
-	<script type="text/javascript" src="/andreylizivinskiy/libs/slick/slick.min.js"></script>
-	<script type="text/javascript" src="/andreylizivinskiy/libs/fancybox/jquery.fancybox.min.js"></script>
-	<script src="/andreylizivinskiy/js/index.js"></script>
+	<div class="wrapper">
+	<div class="content">
+		<div class="first-page">
+			No component found for: 
+			
+			<div class="secondary-welcome">
+				<div class="container">
+					<div class="secondary-welcome__wrap">
+						<div class="secondary-welcome__title">
+							Demchuk Denys
+						</div>
+						<div class="secondary-welcome__description">
+							Кухні та меблі - люкс якість
+						</div>
+						<div class="welcome__btn secondary-welcome__btn">
+							<a href="/products" class="btn">
+								<span>Пошук продукції</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<section class="welcome">
+				<div class="container">
+					<div class="welcome__wrap">
+						<div class="welcome__line-left">
+							<div class="welcome__line"></div>
+							
+						</div>
+						<div class="welcome__line-right">
+							<div class="welcome__line"></div>
+							
+						</div>
+						<div class="welcome__title"></div>
+						<div class="welcome__description">
+							
+						</div>
+						<div class="welcome__btn">
+							<a href="/products" class="btn">
+								<span>Пошук продукції</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+			<section class="secondary-slider">
+				<div class="container">
+					<div class="secondary-slider__title secondary-title">
+						Кращі роботи
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+					</div>
+					<div class="secondary-slider__slider">
+						<div class="secondary-slider__slider-item">
+							<img src="img/slider/1.jpg" alt="">
+						</div>
+						<div class="secondary-slider__slider-item">
+							<img src="img/slider/2.jpg" alt="">
+						</div>
+						<div class="secondary-slider__slider-item">
+							<img src="img/slider/3.jpg" alt="">
+						</div>
+						<div class="secondary-slider__slider-item">
+							<img src="img/slider/1.jpg" alt="">
+						</div>
+						<div class="secondary-slider__slider-item">
+							<img src="img/slider/2.jpg" alt="">
+						</div>
+						<div class="secondary-slider__slider-item">
+							<img src="img/slider/3.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+		
+
+		
+		<section class="slider">
+			<div class="container">
+				<div class="slider__title global-title">Кращі роботи</div>
+				<div class="slider__list">
+					
+					<a href="/portfolio/" class="slider__item">
+						<img src="https://neryxomka.com/template/img/welcome.png" alt="portfolio" />
+					</a>
+					
+					<a href="/portfolio/" class="slider__item">
+						<img src="https://neryxomka.com/template/img/welcome.png" alt="portfolio" />
+					</a>
+					
+					<a href="/portfolio/" class="slider__item">
+						<img src="https://neryxomka.com/template/img/welcome.png" alt="portfolio" />
+					</a>
+					
+				</div>
+			</div>
+		</section>
+		
+
+
+		
+		<div class="secondary-product">
+			<div class="container">
+				<div class="secondary-product__main-title secondary-title">
+					Продукти
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+				</div>
+				<div class="secondary-product__list">
+					<div class="secondary-product__wrap">
+						<div class="secondary-product__item">
+							<div class="secondary-product__img">
+								<img src="img/product/2.jpg" alt="">
+							</div>
+							<div class="secondary-product__title">
+								Title of product
+							</div>
+							<div class="secondary-product__description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolore maxime ea excepturi fugiat consectetur accusamus facere quo suscipit explicabo at amet.
+							</div>
+							<div class="secondary-product__price-wrap">
+								<div class="secondary-product__price-img">
+									<img src="img/icons/money.svg" alt="">
+								</div>
+								<div class="secondary-product__price-text">
+									1000UAH
+								</div>
+							</div>
+							<div class="secondary-product__btn-wrap">
+								<a href="" class="btn">Більше інфо.</a>
+								<a href="" class="btn btn--secondary">Купити</a>
+							</div>
+						</div>
+					</div>
+					<div class="secondary-product__wrap">
+						<div class="secondary-product__item">
+							<div class="secondary-product__img">
+								<img src="img/product/2.jpg" alt="">
+							</div>
+							<div class="secondary-product__title">
+								Title of product
+							</div>
+							<div class="secondary-product__description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolore maxime ea excepturi fugiat consectetur accusamus facere quo suscipit explicabo at amet.
+							</div>
+							<div class="secondary-product__price-wrap">
+								<div class="secondary-product__price-img">
+									<img src="img/icons/money.svg" alt="">
+								</div>
+								<div class="secondary-product__price-text">
+									1000UAH
+								</div>
+							</div>
+							<div class="secondary-product__btn-wrap">
+								<a href="" class="btn">Більше інфо.</a>
+								<a href="" class="btn btn--secondary">Купити</a>
+							</div>
+						</div>
+					</div>
+					<div class="secondary-product__wrap">
+						<div class="secondary-product__item">
+							<div class="secondary-product__img">
+								<img src="img/product/2.jpg" alt="">
+							</div>
+							<div class="secondary-product__title">
+								Title of product
+							</div>
+							<div class="secondary-product__description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolore maxime ea excepturi fugiat consectetur accusamus facere quo suscipit explicabo at amet.
+							</div>
+							<div class="secondary-product__price-wrap">
+								<div class="secondary-product__price-img">
+									<img src="img/icons/money.svg" alt="">
+								</div>
+								<div class="secondary-product__price-text">
+									1000UAH
+								</div>
+							</div>
+							<div class="secondary-product__btn-wrap">
+								<a href="" class="btn">Більше інфо.</a>
+								<a href="" class="btn btn--secondary">Купити</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+
+		
+		<section class="secondary-services">
+			<div class="container">
+				<div class="secondary-services__main-title secondary-title">
+					Послуги
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+				</div>
+				<div class="secondary-services__list">
+					<div class="secondary-services__wrap">
+						<div class="secondary-services__item">
+							<div class="secondary-services__img">
+								<img src="img/services/2.jpg" alt="">
+							</div>
+							<div class="secondary-services__text">
+								<div class="secondary-services__title">
+									Name of services
+								</div>
+								<div class="secondary-services__description">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aut expedita eligendi mollitia?
+								</div>
+								<div class="secondary-services__btn">
+									<a href="" class="btn">Більше інфо.</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="secondary-services__wrap">
+						<div class="secondary-services__item">
+							<div class="secondary-services__img">
+								<img src="img/services/2.jpg" alt="">
+							</div>
+							<div class="secondary-services__text">
+								<div class="secondary-services__title">
+									Name of services
+								</div>
+								<div class="secondary-services__description">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aut expedita eligendi mollitia?
+								</div>
+								<div class="secondary-services__btn">
+									<a href="" class="btn">Більше інфо.</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="secondary-services__wrap">
+						<div class="secondary-services__item">
+							<div class="secondary-services__img">
+								<img src="img/services/2.jpg" alt="">
+							</div>
+							<div class="secondary-services__text">
+								<div class="secondary-services__title">
+									Name of services
+								</div>
+								<div class="secondary-services__description">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aut expedita eligendi mollitia?
+								</div>
+								<div class="secondary-services__btn">
+									<a href="" class="btn">Більше інфо.</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+
+		
+		<section class="secondary-articles">
+			<div class="container">
+				<div class="secondary-articles__main-title secondary-title">
+					Послуги
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+				</div>
+				<div class="secondary-articles__list">
+					<div class="secondary-articles__wrap">
+						<div class="secondary-articles__item">
+							<div class="secondary-articles__img">
+								<img src="img/article/1.jpg" alt="">
+							</div>
+							<div class="secondary-articles__title">
+								Title of article
+							</div>
+							<div class="secondary-articles__description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolore maxime ea excepturi fugiat consectetur accusamus facere quo suscipit explicabo at amet.
+							</div>
+							<div class="secondary-articles__btn">
+								<a href="" class="btn">Читати</a>
+							</div>
+						</div>
+					</div>
+					<div class="secondary-articles__wrap">
+						<div class="secondary-articles__item">
+							<div class="secondary-articles__img">
+								<img src="img/article/1.jpg" alt="">
+							</div>
+							<div class="secondary-articles__title">
+								Title of article
+							</div>
+							<div class="secondary-articles__description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolore maxime ea excepturi fugiat consectetur accusamus facere quo suscipit explicabo at amet.
+							</div>
+							<div class="secondary-articles__btn">
+								<a href="" class="btn">Читати</a>
+							</div>
+						</div>
+					</div>
+					<div class="secondary-articles__wrap">
+						<div class="secondary-articles__item">
+							<div class="secondary-articles__img">
+								<img src="img/article/1.jpg" alt="">
+							</div>
+							<div class="secondary-articles__title">
+								Title of article
+							</div>
+							<div class="secondary-articles__description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolore maxime ea excepturi fugiat consectetur accusamus facere quo suscipit explicabo at amet.
+							</div>
+							<div class="secondary-articles__btn">
+								<a href="" class="btn">Читати</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="secondary-articles__articles">
+					<a href="" class="btn">Більше статей</a>
+				</div>
+			</div>
+		</section>
+		
+		
+
+		
+		<section class="secondary-advantages advantages">
+			<div class="container">
+				<div class="secondary-advantages__main-title secondary-title">
+					Переваги
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+				</div>
+				<div class="secondary-advantages__list">
+					<div class="secondary-advantages__wrap">
+						<div class="secondary-advantages__item">
+							<div class="secondary-advantages__img">
+								<img src="img/advantages/1.svg" alt="">
+							</div>
+							<div class="secondary-advantages__title">
+								Безкоштовний замір
+							</div>
+							<div class="secondary-advantages__description">
+								Ми надаємо безкоштовну послугу заміру вашого
+								простору для точного визначення розмірів і
+								потреб в меблях.
+							</div>
+						</div>
+					</div>
+					<div class="secondary-advantages__wrap">
+						<div class="secondary-advantages__item">
+							<div class="secondary-advantages__img">
+								<img src="img/advantages/2.svg" alt="">
+							</div>
+							<div class="secondary-advantages__title">
+								Створення ескізу та дизайну
+							</div>
+							<div class="secondary-advantages__description">
+								Наші майстри здатні виготовити меблі будь-якої
+								складності, використовуючи найкращі матеріали та
+								технології.
+							</div>
+						</div>
+					</div>
+					<div class="secondary-advantages__wrap">
+						<div class="secondary-advantages__item">
+							<div class="secondary-advantages__img">
+								<img src="img/advantages/3.svg" alt="">
+							</div>
+							<div class="secondary-advantages__title">
+								Виготовлення меблів будь-якої складності
+							</div>
+							<div class="secondary-advantages__description">
+								Ми гарантуємо якість нашої роботи і надаємо
+								гарантійне обслуговування, щоб ви мали спокій і
+								впевненість у своїх меблях.
+							</div>
+						</div>
+					</div>
+					<div class="secondary-advantages__wrap">
+						<div class="secondary-advantages__item">
+							<div class="secondary-advantages__img">
+								<img src="img/advantages/4.svg" alt="">
+							</div>
+							<div class="secondary-advantages__title">
+								Доставка та монтаж
+							</div>
+							<div class="secondary-advantages__description">
+								Ми забезпечуємо доставку меблів до вашого місця
+								та здійснюємо професійний монтаж для вашої
+								зручності.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="advantages" id="adva">
+			<div class="container">
+				<div class="advantages__main-title global-title">Переваги</div>
+				<div class="advantages__list">
+					<div class="advantages__wrap">
+						<div class="advantages__item">
+							<div class="advantages__img">
+								<img src="img/advantages/1.svg" alt="" />
+							</div>
+							<div class="advantages__title">
+								Безкоштовний замір
+							</div>
+							<div class="advantages__description">
+								Ми надаємо безкоштовну послугу заміру вашого
+								простору для точного визначення розмірів і
+								потреб в меблях.
+							</div>
+						</div>
+					</div>
+					<div class="advantages__wrap">
+						<div class="advantages__item">
+							<div class="advantages__img">
+								<img src="img/advantages/2.svg" alt="" />
+							</div>
+							<div class="advantages__title">
+								Створення ескізу та дизайну
+							</div>
+							<div class="advantages__description">
+								Наші майстри здатні виготовити меблі будь-якої
+								складності, використовуючи найкращі матеріали та
+								технології.
+							</div>
+						</div>
+					</div>
+					<div class="advantages__wrap">
+						<div class="advantages__item">
+							<div class="advantages__img">
+								<img src="img/advantages/3.svg" alt="" />
+							</div>
+							<div class="advantages__title">
+								Виготовлення меблів будь-якої складності
+							</div>
+							<div class="advantages__description">
+								Ми гарантуємо якість нашої роботи і надаємо
+								гарантійне обслуговування, щоб ви мали спокій і
+								впевненість у своїх меблях.
+							</div>
+						</div>
+					</div>
+					<div class="advantages__wrap">
+						<div class="advantages__item">
+							<div class="advantages__img">
+								<img src="img/advantages/4.svg" alt="" />
+							</div>
+							<div class="advantages__title">
+								Доставка та монтаж
+							</div>
+							<div class="advantages__description">
+								Ми забезпечуємо доставку меблів до вашого місця
+								та здійснюємо професійний монтаж для вашої
+								зручності.
+							</div>
+						</div>
+					</div>
+					<div class="advantages__wrap">
+						<div class="advantages__item">
+							<div class="advantages__img">
+								<img src="img/advantages/5.svg" alt="" />
+							</div>
+							<div class="advantages__title">
+								Гарантійне обслуговування
+							</div>
+							<div class="advantages__description">
+								Ми гарантуємо якість нашої роботи і надаємо гарантійне обслуговування, щоб ви мали спокій і впевненість у своїх меблях.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	No component found for: 
+</div>
+
+	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="libs/slick/slick.min.js"></script>
+	<script type="text/javascript" src="libs/slick/slick.min.js"></script>
+	<script type="text/javascript" src="libs/fancybox/jquery.fancybox.min.js"></script>
+	<script src="js/index.js"></script>
 	<script type="text/javascript"></script>
-	<script><!-- JS --></script>
+	<script></script>
 </body>
 </html>

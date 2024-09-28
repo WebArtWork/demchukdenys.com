@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<base href="{{{base || prefix + '/'}}}" />
+	<base href="/andreylizivinskiy/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{{{title}}}</title>
-	<meta itemprop="name" content="{{{title}}}">
-	<meta name="twitter:title" content="{{{title}}}">
-	<meta property="og:title" content="{{{title}}}" />
+	<title>Welcome to waw Template</title>
+	<meta itemprop="name" content="Welcome to waw Template">
+	<meta name="twitter:title" content="Welcome to waw Template">
+	<meta property="og:title" content="Welcome to waw Template" />
 
-	<meta name="description" content="{{{description}}}">
-	<meta itemprop="description" content="{{{description}}}">
-	<meta name="twitter:description" content="{{{description}}}">
-	<meta property="og:description" content="{{{description}}}" />
+	<meta name="description" content="description">
+	<meta itemprop="description" content="description">
+	<meta name="twitter:description" content="description">
+	<meta property="og:description" content="description" />
 
-	<meta itemprop="image" content="https://{{{domain+thumb}}}">
-	<meta name="twitter:image:src" content="https://{{{domain+thumb}}}">
-	<meta property="og:image" content="https://{{{domain+thumb}}}" />
+	<meta itemprop="image" content="https://">
+	<meta name="twitter:image:src" content="https://">
+	<meta property="og:image" content="https://" />
 
 	<link rel="icon" type="image/x-icon" href="img/logo.ico">
 	<link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
@@ -27,7 +27,7 @@
 
 	<style>
 		:root {
-			--primary_color: {{{variables.primary_color || "#d3c9b7"}}};
+			--primary_color: #d3c9b7;
 		}
 	</style>
 </head>
@@ -35,7 +35,7 @@
 	<div class="wrapper">
 	<div class="content">
 		<div class="header__top header__top">
-			{{{'components/topbar'|c({website: website})|safe}}}
+			No component found for: 
 			<section class="main-screen">
 				<div class="container">
 					<div class="main__wrap">
@@ -45,28 +45,7 @@
 						<div class="main__sidebar-wrap">
 							<div class="main__sidebar">
 								<div class="main__heading">
-									{% for category in servicesByCategory %}
-									<div class="main__heading-item">
-										<!-- <div class="main__heading-name">
-											<div class="main__heading-text">
-												{{{category.name}}}
-											</div>
-											<div class="main__heading-arrow">
-												<svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M0 1.455L1.61719 0L15 12L1.61719 24L0 22.5525L11.7578 12L0 1.455Z" fill="#ffffff" />
-												</svg>
-											</div>
-										</div> -->
-										 <!-- class="main__heading-answer" -->
-										<ul>
-											{% for tag in servicesByTag %}
-											<li>
-												<a href="/services/{{{tag.id|string}}}">— {{{tag.name}}}</a>
-											</li>
-											{% endfor %}
-										</ul>
-									</div>
-									{% endfor %}
+									
 								</div>
 							</div>
 						</div>
@@ -95,45 +74,55 @@
 								</div>
 							</div> -->
 							<div class="product__list">
-								{% for service in services %}
-								<a href="/service/{{{service.id}}}" class="product__wrap service__wrap">
+								
+								<a href="/service//service" class="product__wrap service__wrap">
 									<div class="product__item service__item">
 										<div class="product__img service__img">
-											<img src="{{{service.thumb}}}" alt="{{{service.name}}}" />
+											<img src="https://neryxomka.com/template/img/welcome.png" alt="service" />
 										</div>
 										<div class="product__info service__info">
 											<div class="product__title">
-												{{{service.name}}}
+												service
 											</div>
-											<pre class="product__description">{{{service.short}}}</pre>
+											<pre class="product__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</pre>
 											<!--
-											{% if website %}
-											<div class="product__btns">
-												<a href="" class="product__btn-wrap">
-													{% if website %}
-													<div class="product__btn-cart">
-														<img src="img/icons/cart.svg" alt="">
-														<span></span>
-													</div>
-													<div class="product__btn-text">
-														{{{service.price}}}
-													</div>
-													{% endif %}
-												</a>
-												<a href="" class="product__btn-wrap">
-													<div class="product__btn-cart">
-														<img src="img/icons/more.svg" alt="">
-														<span></span>
-													</div>
-													<div class="product__btn-text">
-														Переглянути
-													</div>
-												</a>
-											</div>{% endif %}-->
+											-->
 										</div>
 									</div>
 								</a>
-								{% endfor %}
+								
+								<a href="/service//service" class="product__wrap service__wrap">
+									<div class="product__item service__item">
+										<div class="product__img service__img">
+											<img src="https://neryxomka.com/template/img/welcome.png" alt="service" />
+										</div>
+										<div class="product__info service__info">
+											<div class="product__title">
+												service
+											</div>
+											<pre class="product__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</pre>
+											<!--
+											-->
+										</div>
+									</div>
+								</a>
+								
+								<a href="/service//service" class="product__wrap service__wrap">
+									<div class="product__item service__item">
+										<div class="product__img service__img">
+											<img src="https://neryxomka.com/template/img/welcome.png" alt="service" />
+										</div>
+										<div class="product__info service__info">
+											<div class="product__title">
+												service
+											</div>
+											<pre class="product__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</pre>
+											<!--
+											-->
+										</div>
+									</div>
+								</a>
+								
 							</div>
 						</div>
 					</div>
@@ -142,7 +131,7 @@
 			</section>
 		</div>
 	</div>
-	{{{'components/footer'|c({data: store.data,footer: footer})|safe}}}
+	No component found for: 
 </div>
 
 	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>

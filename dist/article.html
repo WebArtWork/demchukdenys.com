@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<base href="/">
+	<base href="{{{base || prefix + '/'}}}" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,11 +19,11 @@
 	<meta name="twitter:image:src" content="https://{{{domain+thumb}}}">
 	<meta property="og:image" content="https://{{{domain+thumb}}}" />
 
-	<link rel="icon" type="image/x-icon" href="/andreylizivinskiy/img/logo.ico">
-	<link rel="stylesheet" type="text/css" href="/andreylizivinskiy/libs/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="/andreylizivinskiy/libs/slick/slick-theme.css"/>
-	<link rel="stylesheet" href="/andreylizivinskiy/libs/fancybox/jquery.fancybox.min.css">
-	<link rel="stylesheet" href="/andreylizivinskiy/css/index.css">
+	<link rel="icon" type="image/x-icon" href="img/logo.ico">
+	<link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/index.css">
 
 	<style>
 		:root {
@@ -34,7 +34,7 @@
 <body>
 	<div class="wrapper">
 	<div class="content">
-        {{{'/andreylizivinskiy/components/topbar'|c({website: website})|safe}}}
+        {{{'components/topbar'|c({website: website})|safe}}}
         <div class="top">
 			<div class="container">
 				<div class="article-o__list">
@@ -52,14 +52,14 @@
 			</div>
 		</div>
 	</div>
-	{{{'/andreylizivinskiy/components/footer'|c({data: store.data, top_articles: top_articles, top_portfolios: top_portfolios, top_services: top_services, top_products: top_products, contents: contents })|safe}}}
+	{{{'components/footer'|c({data: store.data, top_articles: top_articles, top_portfolios: top_portfolios, top_services: top_services, top_products: top_products, contents: contents })|safe}}}
 </div>
 
-	<script type="text/javascript" src="/andreylizivinskiy/js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="/andreylizivinskiy/libs/slick/slick.min.js"></script>
-	<script type="text/javascript" src="/andreylizivinskiy/libs/slick/slick.min.js"></script>
-	<script type="text/javascript" src="/andreylizivinskiy/libs/fancybox/jquery.fancybox.min.js"></script>
-	<script src="/andreylizivinskiy/js/index.js"></script>
+	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="libs/slick/slick.min.js"></script>
+	<script type="text/javascript" src="libs/slick/slick.min.js"></script>
+	<script type="text/javascript" src="libs/fancybox/jquery.fancybox.min.js"></script>
+	<script src="js/index.js"></script>
 	<script type="text/javascript"></script>
 	<script></script>
 </body>

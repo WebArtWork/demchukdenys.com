@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<base href="/">
+	<base href="{{{base || prefix + '/'}}}" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,11 +19,11 @@
 	<meta name="twitter:image:src" content="https://{{{domain+thumb}}}">
 	<meta property="og:image" content="https://{{{domain+thumb}}}" />
 
-	<link rel="icon" type="image/x-icon" href="/andreylizivinskiy/img/logo.ico">
-	<link rel="stylesheet" type="text/css" href="/andreylizivinskiy/libs/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="/andreylizivinskiy/libs/slick/slick-theme.css"/>
-	<link rel="stylesheet" href="/andreylizivinskiy/libs/fancybox/jquery.fancybox.min.css">
-	<link rel="stylesheet" href="/andreylizivinskiy/css/index.css">
+	<link rel="icon" type="image/x-icon" href="img/logo.ico">
+	<link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/index.css">
 
 	<style>
 		:root {
@@ -35,13 +35,13 @@
 	<div class="wrapper">
 	<div class="content">
 		<div class="first-page">
-			{{{'/andreylizivinskiy/components/topbar'|c({website: website})|safe}}}
+			{{{'components/topbar'|c({website: website})|safe}}}
 			{% if variables.welcomeSwitch == "1" %}
 			<div class="secondary-welcome">
 				<div class="container">
 					<div class="secondary-welcome__wrap">
 						<div class="secondary-welcome__title">
-						Demchuk Denys
+							Demchuk Denys
 						</div>
 						<div class="secondary-welcome__description">
 							Кухні та меблі - люкс якість
@@ -55,7 +55,6 @@
 				</div>
 			</div>
 			{% endif %}
-			{{{variables.welcomeSwitch}}}
 			<section class="welcome">
 				<div class="container">
 					<div class="welcome__wrap">
@@ -90,8 +89,7 @@
 						</div>
 						<div class="welcome__line-right">
 							<div class="welcome__line"></div>
-							{% if (store.data.facebook || store.data.instagram)
-							%}
+							{% if store.data.facebook || store.data.instagram %}
 							<div class="welcome__social">
 								{% if store.data.facebook %}
 								<a href="{{{store.data.facebook}}}"><svg height="100%" style="
@@ -134,41 +132,43 @@
 					</div>
 					<div class="secondary-slider__slider">
 						<div class="secondary-slider__slider-item">
-							<img src="/andreylizivinskiy/img/slider/1.jpg" alt="">
+							<img src="img/slider/1.jpg" alt="">
 						</div>
 						<div class="secondary-slider__slider-item">
-							<img src="/andreylizivinskiy/img/slider/2.jpg" alt="">
+							<img src="img/slider/2.jpg" alt="">
 						</div>
 						<div class="secondary-slider__slider-item">
-							<img src="/andreylizivinskiy/img/slider/3.jpg" alt="">
+							<img src="img/slider/3.jpg" alt="">
 						</div>
 						<div class="secondary-slider__slider-item">
-							<img src="/andreylizivinskiy/img/slider/1.jpg" alt="">
+							<img src="img/slider/1.jpg" alt="">
 						</div>
 						<div class="secondary-slider__slider-item">
-							<img src="/andreylizivinskiy/img/slider/2.jpg" alt="">
+							<img src="img/slider/2.jpg" alt="">
 						</div>
 						<div class="secondary-slider__slider-item">
-							<img src="/andreylizivinskiy/img/slider/3.jpg" alt="">
+							<img src="img/slider/3.jpg" alt="">
 						</div>
 					</div>
 				</div>
 			</section>
 		{% endif %}
-		{{{variables.sliderSwitch}}}
 
+		{% if top_portfolios.length %}
 		<section class="slider">
 			<div class="container">
 				<div class="slider__title global-title">Кращі роботи</div>
 				<div class="slider__list">
-					{% for portfolio in topPortfolios %}
-					<a href="/portfolio/{{{portfolio.id}}}" class="slider__item">
+					{% for portfolio in top_portfolios %}
+					<a href="/portfolio/{{{portfolio._id}}}" class="slider__item">
 						<img src="{{{portfolio.thumb}}}" alt="{{{portfolio.name}}}" />
 					</a>
 					{% endfor %}
 				</div>
 			</div>
 		</section>
+		{% endif %}
+
 
 		{% if variables.productSwitch == "1" %}
 		<div class="secondary-product">
@@ -181,7 +181,7 @@
 					<div class="secondary-product__wrap">
 						<div class="secondary-product__item">
 							<div class="secondary-product__img">
-								<img src="/andreylizivinskiy/img/product/2.jpg" alt="">
+								<img src="img/product/2.jpg" alt="">
 							</div>
 							<div class="secondary-product__title">
 								Title of product
@@ -191,7 +191,7 @@
 							</div>
 							<div class="secondary-product__price-wrap">
 								<div class="secondary-product__price-img">
-									<img src="/andreylizivinskiy/img/icons/money.svg" alt="">
+									<img src="img/icons/money.svg" alt="">
 								</div>
 								<div class="secondary-product__price-text">
 									1000UAH
@@ -206,7 +206,7 @@
 					<div class="secondary-product__wrap">
 						<div class="secondary-product__item">
 							<div class="secondary-product__img">
-								<img src="/andreylizivinskiy/img/product/2.jpg" alt="">
+								<img src="img/product/2.jpg" alt="">
 							</div>
 							<div class="secondary-product__title">
 								Title of product
@@ -216,7 +216,7 @@
 							</div>
 							<div class="secondary-product__price-wrap">
 								<div class="secondary-product__price-img">
-									<img src="/andreylizivinskiy/img/icons/money.svg" alt="">
+									<img src="img/icons/money.svg" alt="">
 								</div>
 								<div class="secondary-product__price-text">
 									1000UAH
@@ -231,7 +231,7 @@
 					<div class="secondary-product__wrap">
 						<div class="secondary-product__item">
 							<div class="secondary-product__img">
-								<img src="/andreylizivinskiy/img/product/2.jpg" alt="">
+								<img src="img/product/2.jpg" alt="">
 							</div>
 							<div class="secondary-product__title">
 								Title of product
@@ -241,7 +241,7 @@
 							</div>
 							<div class="secondary-product__price-wrap">
 								<div class="secondary-product__price-img">
-									<img src="/andreylizivinskiy/img/icons/money.svg" alt="">
+									<img src="img/icons/money.svg" alt="">
 								</div>
 								<div class="secondary-product__price-text">
 									1000UAH
@@ -257,14 +257,14 @@
 			</div>
 		</div>
 		{% endif %}
-		{{{variables.productSwitch}}}
+		{% if top_products.length %}
 		<section class="product">
 			<div class="container">
 				<div class="services__main-title global-title">Продукція</div>
 				<div class="product__list">
-					{% for product in topProducts %}
+					{% for product in top_products %}
 					<div class="product__wrap">
-						<a class="product__item" href="/product/{{{product.id}}}">
+						<a class="product__item" href="/product/{{{product._id}}}">
 							<div class="product__img">
 								<img src="{{{product.thumb}}}" alt="" />
 							</div>
@@ -304,10 +304,10 @@
 							</div>
 							<div class="product__btn-wrap">
 								<div class="product__btn-cart">
-									<img src="/andreylizivinskiy/img/icons/cart.svg" alt="" />
+									<img src="img/icons/cart.svg" alt="" />
 								</div>
 								<div class="product__btn-text">
-									{{{product.price}}}
+									{{{product.price}}} {{{currency}}}
 								</div>
 							</div>
 						</a>
@@ -316,7 +316,7 @@
 				</div>
 			</div>
 		</section>
-
+		{% endif %}
 
 		{% if variables.servicesSwitch == "1" %}
 		<section class="secondary-services">
@@ -329,7 +329,7 @@
 					<div class="secondary-services__wrap">
 						<div class="secondary-services__item">
 							<div class="secondary-services__img">
-								<img src="/andreylizivinskiy/img/services/2.jpg" alt="">
+								<img src="img/services/2.jpg" alt="">
 							</div>
 							<div class="secondary-services__text">
 								<div class="secondary-services__title">
@@ -347,7 +347,7 @@
 					<div class="secondary-services__wrap">
 						<div class="secondary-services__item">
 							<div class="secondary-services__img">
-								<img src="/andreylizivinskiy/img/services/2.jpg" alt="">
+								<img src="img/services/2.jpg" alt="">
 							</div>
 							<div class="secondary-services__text">
 								<div class="secondary-services__title">
@@ -365,7 +365,7 @@
 					<div class="secondary-services__wrap">
 						<div class="secondary-services__item">
 							<div class="secondary-services__img">
-								<img src="/andreylizivinskiy/img/services/2.jpg" alt="">
+								<img src="img/services/2.jpg" alt="">
 							</div>
 							<div class="secondary-services__text">
 								<div class="secondary-services__title">
@@ -384,14 +384,14 @@
 			</div>
 		</section>
 		{% endif %}
-		{{{variables.servicesSwitch}}}
+		{% if top_services.length %}
 		<section class="services">
 			<div class="container">
 				<div class="services__main-title global-title">Послуги</div>
 				<div class="services__list">
-					{% for service in topServices %}
+					{% for service in top_services %}
 					<div class="services__wrap">
-						<a href="/service/{{{service.id}}}" class="services__item">
+						<a href="/service/{{{service._id}}}" class="services__item">
 							<div class="services__img">
 								<img src="{{{service.thumb}}}" alt="" />
 							</div>
@@ -409,12 +409,7 @@
 				</div>
 			</div>
 		</section>
-
-
-
-
-
-
+		{% endif %}
 
 		{% if variables.articlesSwitch == "1" %}
 		<section class="secondary-articles">
@@ -427,7 +422,7 @@
 					<div class="secondary-articles__wrap">
 						<div class="secondary-articles__item">
 							<div class="secondary-articles__img">
-								<img src="/andreylizivinskiy/img/article/1.jpg" alt="">
+								<img src="img/article/1.jpg" alt="">
 							</div>
 							<div class="secondary-articles__title">
 								Title of article
@@ -443,7 +438,7 @@
 					<div class="secondary-articles__wrap">
 						<div class="secondary-articles__item">
 							<div class="secondary-articles__img">
-								<img src="/andreylizivinskiy/img/article/1.jpg" alt="">
+								<img src="img/article/1.jpg" alt="">
 							</div>
 							<div class="secondary-articles__title">
 								Title of article
@@ -459,7 +454,7 @@
 					<div class="secondary-articles__wrap">
 						<div class="secondary-articles__item">
 							<div class="secondary-articles__img">
-								<img src="/andreylizivinskiy/img/article/1.jpg" alt="">
+								<img src="img/article/1.jpg" alt="">
 							</div>
 							<div class="secondary-articles__title">
 								Title of article
@@ -479,13 +474,13 @@
 			</div>
 		</section>
 		{% endif %}
-		{{{variables.articlesSwitch}}}
+		{% if top_articles.length %}
 		<section class="articles">
 				<div class="container">
-					<div class="articles__main-title global-title">Статті</div>
+					<div class="articles__main-title global-title">Новини</div>
 					<div class="articles__list">
 						<div class="articles__text">
-							<div class="articles__title">Наші статті</div>
+							<div class="articles__title">Наші новини</div>
 							<div class="articles__description">
 								<p>
 									Це надійне джерело інформації про меблі та
@@ -525,8 +520,8 @@
 							</div>
 						</div>
 						<div class="articles__info">
-							{% for article in topArticles %}
-							<a href="/article/{{{article.id}}}" class="articles__info-wrap">
+							{% for article in top_articles %}
+							<a href="/article/{{{article._id}}}" class="articles__info-wrap">
 								<div class="articles__info-item">
 									<div class="articles__info-img">
 										<img src="{{{article.thumb}}}" alt="" />
@@ -546,116 +541,7 @@
 					</div>
 				</div>
 		</section>
-
-		{% if variables.portfolioSwitch == "1" %}
-		<section class="secondary-portfolio">
-			<div class="container">
-				<div class="secondary-portfolio__main-title secondary-title">
-					Наші роботи
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-				</div>
-				<div class="secondary-portfolio__list">
-					<div class="secondary-portfolio__text">
-						<div class="secondary-portfolio__title">
-							Наші роботи
-						</div>
-						<div class="secondary-portfolio__description">
-							<p>
-								Ласкаво просимо до нашої захоплюючої
-								колекції портфоліо, де ми представляємо наші
-								найкращі творіння в сфері виготовлення
-								меблів. Завітайте до нашого віртуального
-								світу меблевого мистецтва, де кожен елемент
-								втілений в неперевершеній красі та виконаний
-								з майстерністю.
-							</p>
-							<p>
-								У нашому портфоліо ви знайдете розкішні
-								меблі, де кожна деталь відповідає вашим
-								потребам та виражає ваш стиль. Розкішні
-								кухні, елегантні ліжка, стильні ванні меблі,
-								дитячі кімнати, функціональні столи,
-								організовані шафи - все це чекає на вас.
-								Втіліть свої мрії у реальність з нашою
-								майстерністю та якістю. Запрошуємо вас
-								відкрити для себе безліч натхнення та ідей
-								для вашого меблевого простору. Ми готові
-								втілити ваші мрії у реальність і створити
-								унікальні меблі, які будуть вражати кожен
-								погляд.
-							</p>
-						</div>
-						<div class="secondary-portfolio__btn">
-							<a href="/portfolios" class="btn">Всі роботи</a>
-						</div>
-					</div>
-					<div class="secondary-portfolio__slider-wrap">
-						<div class="secondary-portfolio__slider">
-							<div class="secondary-portfolio__slide">
-								<img src="/andreylizivinskiy/img/slider/1.jpg" alt="">
-							</div>
-							<div class="secondary-portfolio__slide">
-								<img src="/andreylizivinskiy/img/slider/2.jpg" alt="">
-							</div>
-							<div class="secondary-portfolio__slide">
-								<img src="/andreylizivinskiy/img/slider/3.jpg" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 		{% endif %}
-		{{{variables.portfolioSwitch}}}
-
-		<section class="portfolio">
-				<div class="container">
-					<div class="articles__main-title global-title">Роботи</div>
-					<div class="portfolio__list">
-						<div class="portfolio__imgs">
-							{% for portfolio in topPortfolios %}
-							<a href="/portfolio/{{{portfolio.id}}}" class="portfolio__imgs-wrap">
-								<img src="{{{portfolio.thumb}}}" alt="{{{portfolio.name}}}" />
-							</a>
-							{% endfor %}
-						</div>
-						<div class="portfolio__text">
-							<div class="portfolio__title portfolio__title--land">
-								Наші роботи
-							</div>
-							<div class="portfolio__description">
-								<p>
-									Ласкаво просимо до нашої захоплюючої
-									колекції портфоліо, де ми представляємо наші
-									найкращі творіння в сфері виготовлення
-									меблів. Завітайте до нашого віртуального
-									світу меблевого мистецтва, де кожен елемент
-									втілений в неперевершеній красі та виконаний
-									з майстерністю.
-								</p>
-								<p>
-									У нашому портфоліо ви знайдете розкішні
-									меблі, де кожна деталь відповідає вашим
-									потребам та виражає ваш стиль. Розкішні
-									кухні, елегантні ліжка, стильні ванні меблі,
-									дитячі кімнати, функціональні столи,
-									організовані шафи - все це чекає на вас.
-									Втіліть свої мрії у реальність з нашою
-									майстерністю та якістю. Запрошуємо вас
-									відкрити для себе безліч натхнення та ідей
-									для вашого меблевого простору. Ми готові
-									втілити ваші мрії у реальність і створити
-									унікальні меблі, які будуть вражати кожен
-									погляд.
-								</p>
-							</div>
-							<div class="portfolio__btn">
-								<a href="/portfolios" class="btn">Всі роботи</a>
-							</div>
-						</div>
-					</div>
-				</div>
-		</section>
 
 		{% if variables.advanSwitch == "1" %}
 		<section class="secondary-advantages advantages">
@@ -668,7 +554,7 @@
 					<div class="secondary-advantages__wrap">
 						<div class="secondary-advantages__item">
 							<div class="secondary-advantages__img">
-								<img src="/andreylizivinskiy/img/advantages/1.svg" alt="">
+								<img src="img/advantages/1.svg" alt="">
 							</div>
 							<div class="secondary-advantages__title">
 								Безкоштовний замір
@@ -683,7 +569,7 @@
 					<div class="secondary-advantages__wrap">
 						<div class="secondary-advantages__item">
 							<div class="secondary-advantages__img">
-								<img src="/andreylizivinskiy/img/advantages/2.svg" alt="">
+								<img src="img/advantages/2.svg" alt="">
 							</div>
 							<div class="secondary-advantages__title">
 								Створення ескізу та дизайну
@@ -698,7 +584,7 @@
 					<div class="secondary-advantages__wrap">
 						<div class="secondary-advantages__item">
 							<div class="secondary-advantages__img">
-								<img src="/andreylizivinskiy/img/advantages/3.svg" alt="">
+								<img src="img/advantages/3.svg" alt="">
 							</div>
 							<div class="secondary-advantages__title">
 								Виготовлення меблів будь-якої складності
@@ -713,7 +599,7 @@
 					<div class="secondary-advantages__wrap">
 						<div class="secondary-advantages__item">
 							<div class="secondary-advantages__img">
-								<img src="/andreylizivinskiy/img/advantages/4.svg" alt="">
+								<img src="img/advantages/4.svg" alt="">
 							</div>
 							<div class="secondary-advantages__title">
 								Доставка та монтаж
@@ -729,7 +615,6 @@
 			</div>
 		</section>
 		{% endif %}
-		{{{variables.advanSwitch}}}
 		<section class="advantages" id="adva">
 			<div class="container">
 				<div class="advantages__main-title global-title">Переваги</div>
@@ -737,7 +622,7 @@
 					<div class="advantages__wrap">
 						<div class="advantages__item">
 							<div class="advantages__img">
-								<img src="/andreylizivinskiy/img/advantages/1.svg" alt="" />
+								<img src="img/advantages/1.svg" alt="" />
 							</div>
 							<div class="advantages__title">
 								Безкоштовний замір
@@ -752,7 +637,7 @@
 					<div class="advantages__wrap">
 						<div class="advantages__item">
 							<div class="advantages__img">
-								<img src="/andreylizivinskiy/img/advantages/2.svg" alt="" />
+								<img src="img/advantages/2.svg" alt="" />
 							</div>
 							<div class="advantages__title">
 								Створення ескізу та дизайну
@@ -767,7 +652,7 @@
 					<div class="advantages__wrap">
 						<div class="advantages__item">
 							<div class="advantages__img">
-								<img src="/andreylizivinskiy/img/advantages/3.svg" alt="" />
+								<img src="img/advantages/3.svg" alt="" />
 							</div>
 							<div class="advantages__title">
 								Виготовлення меблів будь-якої складності
@@ -782,7 +667,7 @@
 					<div class="advantages__wrap">
 						<div class="advantages__item">
 							<div class="advantages__img">
-								<img src="/andreylizivinskiy/img/advantages/4.svg" alt="" />
+								<img src="img/advantages/4.svg" alt="" />
 							</div>
 							<div class="advantages__title">
 								Доставка та монтаж
@@ -797,7 +682,7 @@
 					<div class="advantages__wrap">
 						<div class="advantages__item">
 							<div class="advantages__img">
-								<img src="/andreylizivinskiy/img/advantages/5.svg" alt="" />
+								<img src="img/advantages/5.svg" alt="" />
 							</div>
 							<div class="advantages__title">
 								Гарантійне обслуговування
@@ -810,17 +695,15 @@
 				</div>
 			</div>
 		</section>
-
 	</div>
-	{{{'/andreylizivinskiy/components/footer'|c({data:
-	store.data, footer: footer})|safe}}}
+	{{{'components/footer'|c({data: store.data, top_articles: top_articles, top_portfolios: top_portfolios, top_services: top_services, top_products: top_products, contents: contents })|safe}}}
 </div>
 
-	<script type="text/javascript" src="/andreylizivinskiy/js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="/andreylizivinskiy/libs/slick/slick.min.js"></script>
-	<script type="text/javascript" src="/andreylizivinskiy/libs/slick/slick.min.js"></script>
-	<script type="text/javascript" src="/andreylizivinskiy/libs/fancybox/jquery.fancybox.min.js"></script>
-	<script src="/andreylizivinskiy/js/index.js"></script>
+	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="libs/slick/slick.min.js"></script>
+	<script type="text/javascript" src="libs/slick/slick.min.js"></script>
+	<script type="text/javascript" src="libs/fancybox/jquery.fancybox.min.js"></script>
+	<script src="js/index.js"></script>
 	<script type="text/javascript"></script>
 	<script></script>
 </body>

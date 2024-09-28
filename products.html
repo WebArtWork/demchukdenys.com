@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<base href="{{{base || prefix + '/'}}}" />
+	<base href="/andreylizivinskiy/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{{{title}}}</title>
-	<meta itemprop="name" content="{{{title}}}">
-	<meta name="twitter:title" content="{{{title}}}">
-	<meta property="og:title" content="{{{title}}}" />
+	<title>Welcome to waw Template</title>
+	<meta itemprop="name" content="Welcome to waw Template">
+	<meta name="twitter:title" content="Welcome to waw Template">
+	<meta property="og:title" content="Welcome to waw Template" />
 
-	<meta name="description" content="{{{description}}}">
-	<meta itemprop="description" content="{{{description}}}">
-	<meta name="twitter:description" content="{{{description}}}">
-	<meta property="og:description" content="{{{description}}}" />
+	<meta name="description" content="description">
+	<meta itemprop="description" content="description">
+	<meta name="twitter:description" content="description">
+	<meta property="og:description" content="description" />
 
-	<meta itemprop="image" content="https://{{{domain+thumb}}}">
-	<meta name="twitter:image:src" content="https://{{{domain+thumb}}}">
-	<meta property="og:image" content="https://{{{domain+thumb}}}" />
+	<meta itemprop="image" content="https://">
+	<meta name="twitter:image:src" content="https://">
+	<meta property="og:image" content="https://" />
 
 	<link rel="icon" type="image/x-icon" href="img/logo.ico">
 	<link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
@@ -27,7 +27,7 @@
 
 	<style>
 		:root {
-			--primary_color: {{{variables.primary_color || "#d3c9b7"}}};
+			--primary_color: #d3c9b7;
 		}
 	</style>
 </head>
@@ -35,14 +35,14 @@
 	<div class="wrapper">
 	<div class="content">
 		<div class="header__top header__top">
-			{{{'components/topbar'|c({website: website})|safe}}}
+			No component found for: 
 			<section class="main-screen">
 				<div class="container">
 					<div class="main__wrap">
 						<div class="main__sidebar-burger-wrap">
 							<div class="main__sidebar-burger"></div>
 						</div>
-						{{{'components/sidebar'|c({categories: categories, url: '/products'})|safe}}}
+						No component found for: 
 						<div class="main__content">
 							<!-- <div class="product__input-wrap">
 								<div class="product__input">
@@ -67,19 +67,19 @@
 								</div>
 							</div> -->
 							<div class="product__list">
-								{% for product in products %}
-							<a href="/product/{{{product.id}}}">
+								
+							<a href="/product//product">
 									<div class="product__wrap">
 									<div class="product__item">
 										<div class="product__img">
-											<img src="{{{product.thumb}}}" alt="{{{product.name}}}">
+											<img src="https://neryxomka.com/template/img/welcome.png" alt="product">
 										</div>
 										<div class="product__info">
 											<div class="product__title">
-												{{{product.name}}}
+												product
 											</div>
 											<div class="product__description">
-												{{{product.short}}}
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
 											</div>
 											<!-- <ul class="product__notes">
 												<li>
@@ -110,17 +110,9 @@
 										</div>
 										<div class="product__btns">
 											<a href="" class="product__btn-wrap">
-												{% if website %}
-												<div class="product__btn-cart">
-													<img src="img/icons/cart.svg" alt="">
-													<span></span>
-												</div>
-												<div class="product__btn-text">
-													{{{product.price}}}
-												</div>
-												{% endif %}
+												
 											</a>
-											<a href="/product/{{{product.id}}}"  class="product__btn-wrap">
+											<a href="/product//product"  class="product__btn-wrap">
 												<div class="product__btn-cart">
 													<img src="img/icons/more.svg" alt="">
 													<span></span>
@@ -134,7 +126,125 @@
 									</div>
 								</div>
 							</a>
-								{% endfor %}
+								
+							<a href="/product//product">
+									<div class="product__wrap">
+									<div class="product__item">
+										<div class="product__img">
+											<img src="https://neryxomka.com/template/img/welcome.png" alt="product">
+										</div>
+										<div class="product__info">
+											<div class="product__title">
+												product
+											</div>
+											<div class="product__description">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+											</div>
+											<!-- <ul class="product__notes">
+												<li>
+													<div class="product__notes-img">
+
+													</div>
+													<div class="product__notes-text">
+														peculiarity of product
+													</div>
+												</li>
+												<li>
+													<div class="product__notes-img">
+
+													</div>
+													<div class="product__notes-text">
+														peculiarity of product
+													</div>
+												</li>
+												<li>
+													<div class="product__notes-img">
+
+													</div>
+													<div class="product__notes-text">
+														peculiarity of product
+													</div>
+												</li>
+											</ul> -->
+										</div>
+										<div class="product__btns">
+											<a href="" class="product__btn-wrap">
+												
+											</a>
+											<a href="/product//product"  class="product__btn-wrap">
+												<div class="product__btn-cart">
+													<img src="img/icons/more.svg" alt="">
+													<span></span>
+												</div>
+												<div class="product__btn-text">
+													Переглянути
+												</div>
+											</a>
+										</div>
+
+									</div>
+								</div>
+							</a>
+								
+							<a href="/product//product">
+									<div class="product__wrap">
+									<div class="product__item">
+										<div class="product__img">
+											<img src="https://neryxomka.com/template/img/welcome.png" alt="product">
+										</div>
+										<div class="product__info">
+											<div class="product__title">
+												product
+											</div>
+											<div class="product__description">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+											</div>
+											<!-- <ul class="product__notes">
+												<li>
+													<div class="product__notes-img">
+
+													</div>
+													<div class="product__notes-text">
+														peculiarity of product
+													</div>
+												</li>
+												<li>
+													<div class="product__notes-img">
+
+													</div>
+													<div class="product__notes-text">
+														peculiarity of product
+													</div>
+												</li>
+												<li>
+													<div class="product__notes-img">
+
+													</div>
+													<div class="product__notes-text">
+														peculiarity of product
+													</div>
+												</li>
+											</ul> -->
+										</div>
+										<div class="product__btns">
+											<a href="" class="product__btn-wrap">
+												
+											</a>
+											<a href="/product//product"  class="product__btn-wrap">
+												<div class="product__btn-cart">
+													<img src="img/icons/more.svg" alt="">
+													<span></span>
+												</div>
+												<div class="product__btn-text">
+													Переглянути
+												</div>
+											</a>
+										</div>
+
+									</div>
+								</div>
+							</a>
+								
 							</div>
 						</div>
 					</div>
@@ -146,7 +256,7 @@
 		</div>
 
 	</div>
-	{{{'components/footer'|c({data: store.data, top_articles: top_articles, top_portfolios: top_portfolios, top_services: top_services, top_products: top_products, contents: contents })|safe}}}
+	No component found for: 
 </div>
 
 	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>

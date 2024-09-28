@@ -1,6 +1,6 @@
 <div class="wrapper">
 	<div class="content">
-        {{{'/andreylizivinskiy/components/topbar'|c({website: website})|safe}}}
+        {{{'components/topbar'|c({website: website})|safe}}}
         <div class="top">
             <div class="container">
                 <div class="article__main-title global-title">
@@ -37,7 +37,7 @@
                         <!-- <div class="estate__details-wrap">
                             <div class="estate__details-item">
                                 <div class="estate__details-img">
-                                    <img src="/andreylizivinskiy/img/icons/area.svg" alt="">
+                                    <img src="img/icons/area.svg" alt="">
                                 </div>
                                 <div class="estate__details-text">
                                     12312321312
@@ -45,7 +45,7 @@
                             </div>
                             <div class="estate__details-item">
                                 <div class="estate__details-img">
-                                    <img src="/andreylizivinskiy/img/icons/price.svg" alt="">
+                                    <img src="img/icons/price.svg" alt="">
                                 </div>
                                 <div class="estate__details-text">
                                     12312321312
@@ -58,7 +58,7 @@
                             </div>
 							{% if website %}
                             <a href="https://{{{website}}}/order/product/{{{product.id}}}" class="product__btn-cart">
-                                <img src="/andreylizivinskiy/img/icons/cart.svg" alt="">
+                                <img src="img/icons/cart.svg" alt="">
                             </a>
 							{% endif %}
                         </div>
@@ -67,5 +67,5 @@
             </div>
         </div>
 	</div>
-	{{{'/andreylizivinskiy/components/footer'|c({data: store.data, top_articles: top_articles, top_portfolios: top_portfolios, top_services: top_services, top_products: top_products, contents: contents })|safe}}}
+	{{{'components/footer'|c({data: store.data, top_articles: top_articles, top_portfolios: top_portfolios, top_services: top_services, top_products: top_products, contents: contents })|safe}}}
 </div>

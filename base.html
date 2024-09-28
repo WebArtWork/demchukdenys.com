@@ -32,36 +32,13 @@
 	</style>
 </head>
 <body>
-	<div class="wrapper">
-	<div class="content">
-		{{{'components/topbar'|c({website: website})|safe}}}
-		<div class="top">
-			<div class="container">
-				<div class="article-o__list">
-					{% if content.thumb %}
-					<div class="article-o__main-img">
-						<img src="{{{thumb}}}" alt="{{{name}}}">
-					</div>
-					{% endif %}
-					<div class="article-o__main-title">
-						{{{name}}}
-					</div>
-					<pre class="article-o__description">
-						{{{content.content|safe}}}
-					</pre>
-				</div>
-			</div>
-		</div>
-	</div>
-	{{{'components/footer'|c({data: store.data, top_articles: top_articles, top_portfolios: top_portfolios, top_services: top_services, top_products: top_products, contents: contents })|safe}}}
-</div>
-
+	<!-- HTML -->
 	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="libs/slick/slick.min.js"></script>
 	<script type="text/javascript" src="libs/slick/slick.min.js"></script>
 	<script type="text/javascript" src="libs/fancybox/jquery.fancybox.min.js"></script>
 	<script src="js/index.js"></script>
 	<script type="text/javascript"></script>
-	<script></script>
+	<script><!-- JS --></script>
 </body>
 </html>
