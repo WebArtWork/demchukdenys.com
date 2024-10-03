@@ -8,13 +8,12 @@ $white: #ffffff;
 /* -- WELCOME -- */
 
 .first-page{
-
 	color: #fff;
 }
 
 .welcome{
 	padding: 150px 0;
-	background-image: url('img/welcome.png');
+	background-image: url('../img/welcome.png');
 	background-size: cover;
     background-position: center;
 	&__wrap{

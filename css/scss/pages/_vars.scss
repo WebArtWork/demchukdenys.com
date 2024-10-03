@@ -1,5 +1,7 @@
 /*      secondry       */
-
+.slider{
+    padding-bottom: 70px;
+}
 .secondary-title{
     background: var(--gradient-title, linear-gradient(138deg, #31C598 0%, #40BDBD 100%));
     background-clip: text;
@@ -48,7 +50,7 @@
 
 .secondary-welcome{
     padding: 150px 0;
-	background-image: url('img/vars/1.jpg');
+	background-image: url('../img/vars/1.jpg');
 	background-size: cover;
     background-position: center;
     @media screen and (max-width: 991px){
@@ -178,6 +180,7 @@
 }
 
 .secondary-product{
+    padding-bottom: 70px;
     &__main-title{
         padding-bottom: 70px;
     }
@@ -268,6 +271,7 @@
 }
 
 .secondary-services{
+    padding-bottom: 70px;
     &__main-title{
         padding-bottom: 70px;
     }
@@ -352,6 +356,7 @@
 }
 
 .secondary-advantages{
+    margin-bottom: 70px;
     &__main-title{
         padding-bottom: 70px;
     }
@@ -419,6 +424,7 @@
 }
 
 .secondary-articles{
+    padding-bottom: 70px;
     &__main-title{
         padding-bottom: 70px;
     }
