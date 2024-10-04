@@ -1,12 +1,9 @@
 {
-	"name": "product",
-	"products": {
-		"id": "/product",
-		"price": 1200,
-		"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-        "thumb": "https://neryxomka.com/template/img/welcome.png",
-        "thumbs": ["https://neryxomka.com/template/img/welcome.png"],
-		"name": "product"
+	"product": {
+		"thumb": "img/1.jpg",
+		"name": "Name of title",
+		"description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'",
+		"price": "121"
+		
 	}
 }

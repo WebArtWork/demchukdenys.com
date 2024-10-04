@@ -3,25 +3,25 @@
 	"portfolios": [
 		{
 			"id": "/portfolio",
-			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"thumb": "img/1.jpg",
 			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
 			"name": "andrey.lizivinskiy"
 		},
 		{
 			"id": "/portfolio",
-			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"thumb": "img/2.jpg",
 			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
 			"name": "andrey.lizivinskiy"
 		},
 		{
 			"id": "/portfolio",
-			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"thumb": "img/3.jpg",
 			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
 			"name": "andrey.lizivinskiy"
 		},
 		{
 			"id": "/portfolio",
-			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"thumb": "img/1.jpg",
 			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
 			"name": "andrey.lizivinskiy"
 		}

@@ -1,6 +1,21 @@
 {
 	"store": {
-		"telegram": "https://t.me/wawceo"
+		"telegram": "https://t.me/wawceo",
+		"name": "Demchuk Denys",
+		"description": "Кухні та меблі - люкс якість",
+		"data":{
+			"telegram": "link",
+			"phone": "1234",
+			"facebook": "hohhuhu",
+			"instagram": "@ahhuahua"
+		},
+		"website": "https://t.me/wawceo"
+	},
+	"data": {
+			"telegram": "link",
+			"phone": "1234",
+			"facebook": "hohhuhu",
+			"instagram": "@ahhuahua"
 	},
 	"variables":{
 		"welcomeSwitch": "1",
@@ -70,6 +85,14 @@
 			"name": "product"
 		}
 	],
+	"product": [
+		{
+			"name": "Назва1"
+		},
+		{
+			"name": "Назва2"
+		}
+	],
 	"services": [
 		{
 			"id": "/service",
@@ -113,5 +136,6 @@
 			"name": "article"
 		}
 	]
+	
 
 }

@@ -1,6 +1,7 @@
 <div class="wrapper">
 	<div class="content">
 		<div class="first-page">
+			<!--
 			{{{'components/topbar'|c({website: website})|safe}}}
 			{% if variables.welcomeSwitch == "1" %}
 			<div class="secondary-welcome">
@@ -21,6 +22,35 @@
 				</div>
 			</div>
 			{% endif %}
+			-->
+			<header class="header">
+				<div class="container">
+					<div class="header__wrap">
+						<div class="header__logo">
+							<a href="/">
+								<img src="img/logo.svg" alt="">
+							</a>
+						</div>
+						<div class="burger-wrap">
+							<div class="burger"></div>
+						</div>
+						<ul class="header__navigation">
+							<li><a href="/articles">Новини</a></li>
+							<li><a href="/portfolios">Роботи</a></li>
+							<li><a href="/products">Продукція</a></li>
+							<li><a href="/services">Послуги</a></li>
+						</ul>
+						<a {% if store.website %}href="https://{{{store.website}}}/profile"{% endif %} class="header__user">
+						{% if store.website %}
+							<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M19.9998 24C25.5139 24 29.984 18.6274 29.984 12C29.984 5.37258 25.5139 0 19.9998 0C14.4857 0 10.0156 5.37258 10.0156 12C10.0156 18.6274 14.4857 24 19.9998 24Z" fill="white"/>
+								<path d="M39.569 34.2C37.7718 30.6 34.3772 27.6 29.9842 25.8C28.7861 25.4 27.3883 25.4 26.3899 26C24.393 27.2 22.3962 27.8 20 27.8C17.6038 27.8 15.607 27.2 13.6101 26C12.6117 25.6 11.2139 25.4 10.0158 26C5.62278 27.8 2.22815 30.8 0.431001 34.4C-0.966785 37 1.22974 40 4.22499 40H35.775C38.7703 40 40.9668 37 39.569 34.2Z" fill="white"/>
+							</svg>
+						{% endif %}
+						</a>
+					</div>
+				</div>
+			</header>
 			<section class="welcome">
 				<div class="container">
 					<div class="welcome__wrap">
@@ -120,6 +150,7 @@
 			</section>
 		{% endif %}
 
+		<!--
 		{% if top_portfolios.length %}
 		<section class="slider">
 			<div class="container">
@@ -134,7 +165,7 @@
 			</div>
 		</section>
 		{% endif %}
-
+		-->
 
 		{% if variables.productSwitch == "1" %}
 		<div class="secondary-product">
@@ -223,6 +254,8 @@
 			</div>
 		</div>
 		{% endif %}
+
+
 		{% if top_products.length %}
 		<section class="product">
 			<div class="container">
@@ -350,6 +383,7 @@
 			</div>
 		</section>
 		{% endif %}
+
 		{% if top_services.length %}
 		<section class="services">
 			<div class="container">
@@ -581,6 +615,8 @@
 			</div>
 		</section>
 		{% endif %}
+
+		<!--
 		<section class="advantages" id="adva">
 			<div class="container">
 				<div class="advantages__main-title global-title">Переваги</div>
@@ -661,6 +697,75 @@
 				</div>
 			</div>
 		</section>
+		-->
 	</div>
-	{{{'components/footer'|c({data: store.data, top_articles: top_articles, top_portfolios: top_portfolios, top_services: top_services, top_products: top_products, contents: contents })|safe}}}
+	<div class="footer">
+		<div class="container">
+			<div class="footer__list">
+				<div class="footer__wrap footer__wrap--first">
+					<a href="">
+						<img src="img/logo.svg" alt="" />
+					</a>
+				</div>
+				<div class="footer__list-wrap footer__wrap">
+					<div class="footer__item">
+						<a class="footer__links-title" href="/articles">Новини</a>
+						{% for article in top_articles %}
+						<a href="/article/{{{article._id}}}" class="footer__link">{{{article.name}}}</a>
+						{% endfor %}
+					</div>
+					<div class="footer__item">
+						<a class="footer__links-title" href="/portfolios">Роботи</a>
+						{% for portfolio in top_portfolios %}
+						<a href="/portfolio/{{{portfolio._id}}}" class="footer__link">{{{portfolio.name}}}</a>
+						{% endfor %}
+					</div>
+					<div class="footer__item">
+						<a class="footer__links-title" href="/services">Послуги</a>
+						{% for service in top_services %}
+						<a href="/service/{{{service._id}}}" class="footer__link">{{{service.name}}}</a>
+						{% endfor %}
+					</div>
+					<div class="footer__item">
+						<a class="footer__links-title" href="/products">Продукція</a>
+						{% for product in top_products %}
+						<a href="/product/{{{product._id}}}" class="footer__link">{{{product.name}}}</a>
+						{% endfor %}
+					</div>
+					<div class="footer__item">
+						<a class="footer__links-title" href="/">Інформація</a>
+						{% for content in contents %}
+						<a href="{{{content.url}}}" class="footer__link">{{{content.name}}}</a>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="footer__wrap footer__wrap--last">
+					<div class="footer__wrap-socials">
+						{% if data.telegram %}
+						<a href="{{{data.telegram}}}" class="footer__btn btn">
+							<img src="img/social/1.svg" alt="" />
+						</a>
+						{% endif %}
+						{% if data.phone %}
+						<a href="tel:{{{data.phone}}}" class="footer__btn btn">
+							<img src="img/social/2.svg" alt="" />
+						</a>
+						{% endif %}
+					</div>
+					<div class="footer__wrap-socials">
+						{% if data.facebook %}
+						<a href="{{{data.facebook}}}" class="footer__btn btn">
+							<img src="img/social/3.svg" alt="" />
+						</a>
+						{% endif %}
+						{% if data.instagram %}
+						<a href="{{{data.instagram}}}" class="footer__btn btn">
+							<img src="img/social/4.svg" alt="" />
+						</a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
 </div>
