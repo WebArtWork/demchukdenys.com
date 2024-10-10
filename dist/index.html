@@ -74,13 +74,19 @@
 							<li><a href="/products">Продукція</a></li>
 							<li><a href="/services">Послуги</a></li>
 						</ul>
-						<a {% if store.website %}href="https://{{{store.website}}}/profile"{% endif %} class="header__user">
-						{% if store.website %}
-							<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M19.9998 24C25.5139 24 29.984 18.6274 29.984 12C29.984 5.37258 25.5139 0 19.9998 0C14.4857 0 10.0156 5.37258 10.0156 12C10.0156 18.6274 14.4857 24 19.9998 24Z" fill="white"/>
-								<path d="M39.569 34.2C37.7718 30.6 34.3772 27.6 29.9842 25.8C28.7861 25.4 27.3883 25.4 26.3899 26C24.393 27.2 22.3962 27.8 20 27.8C17.6038 27.8 15.607 27.2 13.6101 26C12.6117 25.6 11.2139 25.4 10.0158 26C5.62278 27.8 2.22815 30.8 0.431001 34.4C-0.966785 37 1.22974 40 4.22499 40H35.775C38.7703 40 40.9668 37 39.569 34.2Z" fill="white"/>
+						<a {% if store.website %}href="https://{{{store.website}}}/profile" {% endif %}
+							class="header__user">
+							{% if store.website %}
+							<svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M19.9998 24C25.5139 24 29.984 18.6274 29.984 12C29.984 5.37258 25.5139 0 19.9998 0C14.4857 0 10.0156 5.37258 10.0156 12C10.0156 18.6274 14.4857 24 19.9998 24Z"
+									fill="white" />
+								<path
+									d="M39.569 34.2C37.7718 30.6 34.3772 27.6 29.9842 25.8C28.7861 25.4 27.3883 25.4 26.3899 26C24.393 27.2 22.3962 27.8 20 27.8C17.6038 27.8 15.607 27.2 13.6101 26C12.6117 25.6 11.2139 25.4 10.0158 26C5.62278 27.8 2.22815 30.8 0.431001 34.4C-0.966785 37 1.22974 40 4.22499 40H35.775C38.7703 40 40.9668 37 39.569 34.2Z"
+									fill="white" />
 							</svg>
-						{% endif %}
+							{% endif %}
 						</a>
 					</div>
 				</div>
@@ -675,13 +681,7 @@
 			</div>
 		</section>
 		{% endif %}
-<<<<<<< HEAD
 		<!--<section class="advantages" id="adva">
-=======
-
-		<!--
-		<section class="advantages" id="adva">
->>>>>>> 9144d8e6ff367ede7eb856d74620a77bad915091
 			<div class="container">
 				<div class="advantages__main-title global-title">Переваги</div>
 				<div class="advantages__list">
@@ -761,15 +761,10 @@
 					</div>
 				</div>
 			</div>
-<<<<<<< HEAD
 		</section>-->
 	</div>
 	{{{'components/footer'|c({data: store.data, top_articles: top_articles, top_portfolios: top_portfolios,
 	top_services: top_services, top_products: top_products, contents: contents })|safe}}}
-=======
-		</section>
-		-->
-	</div>
 	<div class="footer">
 		<div class="container">
 			<div class="footer__list">
@@ -838,9 +833,9 @@
 				</div>
 			</div>
 		</div>
-	</div>	
->>>>>>> 9144d8e6ff367ede7eb856d74620a77bad915091
+	</div>
 </div>
+
 	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="libs/slick/slick.min.js"></script>
 	<script type="text/javascript" src="libs/slick/slick.min.js"></script>
