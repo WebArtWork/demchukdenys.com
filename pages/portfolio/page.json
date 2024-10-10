@@ -2,8 +2,8 @@
 	"name": "portfolio",
 	"portfolio": {
 		"id": "/portfolio",
-        "thumb": "https://neryxomka.com/template/img/welcome.png",
-        "thumbs": ["https://neryxomka.com/template/img/welcome.png"],
+        "thumb": "img/1.jpg",
+        "thumbs": ["img/1.jpg", "img/2.jpg", "img/1.jpg"],
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
 		"name": "andrey.lizivinskiy"
 	}

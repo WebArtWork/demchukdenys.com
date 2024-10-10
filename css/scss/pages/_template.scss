@@ -52,10 +52,11 @@ $white: #ffffff;
 		}
 	}
 	&__title{
-		font-weight: 600;
+		font-weight: 400;
 		font-size: 60px;
 		color: #23E0B3;
 		text-align: center;
+		text-transform: uppercase;
 		span{
 			color: #fff;
 			display: block;
