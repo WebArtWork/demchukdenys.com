@@ -143,7 +143,7 @@
             border-radius: 120px;
             background: #23e0b3;
             height: 40px;
-            bottom: -70px;
+            bottom: -90px;
             top: unset;
         }
         .slick-prev{
@@ -641,5 +641,22 @@
 
             }
         }
+    }
+}
+@media screen and (max-width: 767px){
+	.secondary-slider__title {
+		padding-bottom: 40px;
+	}
+	.secondary-services__main-title {
+		padding-bottom: 40px;
+	}
+	.secondary-articles__main-title {
+		padding-bottom: 40px;
+	}
+    .secondary-slider {
+        padding: 60px 0;
+    }
+    .secondary-title span {
+        font-size: 20px;
     }
 }
