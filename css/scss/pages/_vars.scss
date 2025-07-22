@@ -659,4 +659,24 @@
     .secondary-title span {
         font-size: 20px;
     }
+    .secondary-title span {
+        font-size: 17px;
+        padding-top: 5px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .secondary-title span {
+        font-size: 17px;
+        padding-top: 5px;
+    }
+    .secondary-slider {
+        padding: 45px 0;
+    }
+    .secondary-services {
+        padding-bottom: 45px;
+    }
+    	.secondary-advantages__main-title {
+		padding-bottom: 45px;
+	}
 }

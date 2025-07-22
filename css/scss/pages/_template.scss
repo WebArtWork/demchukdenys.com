@@ -485,7 +485,7 @@ $white: #ffffff;
         top: 0;
         width: 100%;
         left: 0;
-        background: rgba(0,0,0,.4117647059);
+        background: rgba(0, 0, 0, 0.671);
         z-index: 3;
         padding: 0;
         opacity: 0;
@@ -493,7 +493,7 @@ $white: #ffffff;
         max-height: 0;
         overflow: hidden;
         transition: all .3s;
-        border-bottom: 1px solid #1ac5eb;
+        border-bottom: 1px solid #23e0b3;
         margin: 0 auto;
         align-items: center;
         justify-content: center
@@ -659,6 +659,13 @@ $white: #ffffff;
 	.burger--close::before {
 		transform: translateY(-5px) rotate(45deg);
 	}
+	.secondary-title {
+        font-size: 32px !important;
+    }
+	.secondary-title span {
+        font-size: 17px;
+        padding-top: 5px;
+    }
 	.welcome__description {
         max-width: 330px;
         font-size: 22px;
@@ -742,4 +749,8 @@ $white: #ffffff;
 	.slider__item img {
 		height: 290px;
 	}
+	.advantages {
+        padding: 45px 0;
+    }
+
 }
